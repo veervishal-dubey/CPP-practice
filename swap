@@ -1,0 +1,15 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int x=10;
+    int y=20;
+    x=x+y;//x=30
+    y=x-y;//y=10
+    x=x-y;//20
+    cout<<x<<endl;
+    cout<<y<<endl;
+    return 0;
+}
