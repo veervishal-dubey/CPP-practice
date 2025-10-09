@@ -13,6 +13,6 @@ int main() {
     
     delete p;
     cout<<"Pointer: "<<p<<'\n';
-    cout<<"Value: "<<*p<<'\n'<<endl;
+    cout<<"Value: "<<*p<<'\n'<<endl; //will return garbage values
     return 0;
 }
