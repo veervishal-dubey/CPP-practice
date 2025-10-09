@@ -1,0 +1,10 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int basic=1000;
+    cout<<setw(50)<<"basic:"<<setw(50)<<basic<<endl;
+    return 0;
+}
