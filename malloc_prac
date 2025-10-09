@@ -1,0 +1,19 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    size_t s=0; //standard way to define size in cpp
+    // Write C++ code here
+    int *ptr = (int*) malloc(s);
+    if (ptr==NULL)
+    {
+        cout<<"The null pointer has been returned";
+    }
+    else
+    {
+        cout<<"The pointer returned was not null\n"<<ptr<<endl;
+    }
+
+    return 0;
+}
