@@ -12,5 +12,12 @@ int main() {
     
     cout<<"Original letter:"<<letter<<endl;
     cout<<"Reference: "<<a<<endl;
+
+    int x=10;
+    int *p=&x;
+    int &m=*p;
+    cout<<p<<endl;
+    cout<<*p<<endl;
+    cout<<m<<endl;
     return 0;
 }
