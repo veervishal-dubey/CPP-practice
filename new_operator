@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int *p=new int;
+    *p=25;
+    float *q=new float(2.5);
+    
+    
+    cout<<"Pointer: "<<p<<'\n';
+    cout<<"Value: "<<*p<<'\n'<<endl;
+    cout<<"Pointer: "<<q<<'\n';
+    cout<<"Value: "<<*q<<'\n'<<endl;
+
+    return 0;
+}
