@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Solid{
+    int m;
+    int n;
+    public:
+        Solid()
+        {
+            m=0;
+            n=0;
+        }
+        Solid(int m1, int n1)
+        {
+            m=m1;
+            n=n1;
+        }
+        int getm()
+        {
+            return m;
+        }
+        int getn(){
+            return n;
+        }
+};
+int main()
+{
+    Solid s1(10,20);
+    Solid s2;
+    Solid s3=s1;
+    Solid s4(s2);
+    cout<<s1.getm()<<endl;
+    cout<<s2.getm()<<endl;
+    cout<<s3.getm()<<endl;
+    cout<<s4.getm()<<endl;
+}
