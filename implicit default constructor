@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class Myclass{
+    private:
+    int x;
+    public:
+        int getx() const{
+            return x;
+        }
+        void setx(int y)
+        {
+            x=y;
+        }
+};
+int main()
+{
+    Myclass obj;
+    cout<<"default value is: "<<obj.getx()<<endl;
+    obj.setx(10);
+    cout<<"new value is: "<<obj.getx()<<endl;
+    
+    return 0;
+}
