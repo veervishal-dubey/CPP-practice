@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class Constructor{
+    int x;
+    int y;
+    public:
+        Constructor(int a, int b);
+        void display();
+};
+
+Constructor::Constructor(int a, int b)
+{
+    x=a;
+    y=b;
+}
+
+void Constructor::display()
+{
+    cout<<"The first value is: "<<x<<endl;
+    cout<<"The second value is: "<<y<<endl;
+}
+
+int main()
+{
+    Constructor c1(100,200);//implicit call
+    Constructor c2= Constructor(300,400);//explicit call
+    c1.display();
+    c2.display();
+
+    return 0;
+}
