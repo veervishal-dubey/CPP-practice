@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Constructor{
+    int x;
+    int y;
+    public:
+        Constructor(int a, int b);
+        void display();
+};
+
+Constructor::Constructor(int a, int b)
+{
+    x=a;
+    y=b;
+}
+
+void Constructor::display()
+{
+    cout<<"The first value is: "<<x<<endl;
+    cout<<"The second value is: "<<y<<endl;
+}
+
+class Person
+{
+    string name;
+    int age;
+    public:
+        Person(string n, int a)
+        {
+            name=n;
+            age=a;
+        }
+        Person greater(Person a, Person b);
+        friend ostream& operator<<(ostream& os, const Person& p);
+
+};
+
+Person Person::greater(Person a, Person b)
+{
+    if (a.age>b.age)
+    {
+        *this = a;
+        return *this;
+    }
+    else{
+        *this = b;
+        return *this;
+    }
+}
+ostream& operator<<(ostream& os, const Person& p) {
+    os << "Name: " << p.name << ", Age: " << p.age;
+    return os;
+}
+
+int main()
+{
+    Person c1("ABC",200);//implicit call
+    Person c2= Person("BCD",400);//explicit call
+    Person result=c1.greater(c1,c2);
+    cout<<result<<endl;
+
+    return 0;
+}
