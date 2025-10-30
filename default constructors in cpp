@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class Construct{
+    int x;
+    int y;
+    public:
+        Construct();
+        void display();
+};
+
+Construct::Construct(){
+    x=10;
+    y=12;
+}
+void Construct::display(){
+    cout<<"The first value is: "<<x<<endl;
+    cout<<"The second value is: "<<y<<endl;
+}
+
+int main()
+{
+    Construct dc;
+    dc.display();
+    return 0;
+}
