@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Engine{
+    public:
+        Engine()
+        {
+            cout<<"Created Engine! "<<endl;
+        }
+        ~Engine()
+        {
+            cout<<"Engine Destroyed! "<<endl;
+        }
+};
+
+class Car{
+    
+    public:
+        Engine engine;
+        Car()
+        {
+            cout<<"Created Car! "<<endl;
+        }
+        ~Car()
+        {
+            cout<<"Car Destroyed! "<<endl;
+        }
+};
+
+int main()
+{
+    Car mycar;
+    return 0;
+}
