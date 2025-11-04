@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class B{
+    private:
+        int m;
+        int n;
+        int *p;
+    public:
+        B(int m1, int n1, int p1)
+        {
+            m=m1;
+            n=n1;
+            p=new int;
+            *p=p1;
+        }
+        B(const B &p1)
+        {
+            m=p1.m;
+            n=p1.n;
+            p=new int;
+            *p=*(p1.p);
+        }
+        void showdata()
+        {
+            cout<<" M= "<<m;
+            cout<<" N= "<<n;
+            cout<<" P= "<<p;
+            cout<<" *P "<<*p<<endl;
+        }
+        
+};  
+
+int main(){
+    B a(15,20,25);
+    B b=a;
+    a.showdata();
+    b.showdata();
+    
+}
