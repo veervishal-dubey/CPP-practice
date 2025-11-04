@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class B{
+    private:
+        int m;
+        int n;
+    public:
+        B(int m1, int n1)
+        {
+            m=m1;
+            n=n1;
+        }
+        B(const B &p1)
+        {
+            m=p1.m;
+            n=p1.n;
+        }
+        int getm()
+        {
+            return m;
+        }
+        int getn()
+        {
+            return n;
+        }
+};  
+
+int main(){
+    B a(15,20);
+    B b=a;
+    cout<<"a.m="<<a.getm()<<" a.n="<<a.getn()<<endl;
+    cout<<"b.m="<<b.getm()<<" b.n="<<b.getn()<<endl;
+}
