@@ -1,27 +1,38 @@
 #include <iostream>
 using namespace std;
-class Test{
+class Complex{
     private:
-    int num;
+        float real;
+        float img;
     public:
-    Test(){
-        cout<<"Enter a number: ";
-        cin>>num;
+        Complex(float x=0, float y=0)
+        {
+            real=x;
+            img=y;
+        }
+        friend Complex operator +(Complex &c1, Complex &c2);
+        void display(){
+            cout<<real<<"+i "<<img<<"\n"<<endl;
+        }
 
-    }
-    friend void operator ++(Test &s);
-    void print(){
-        cout<<"The num is: "<<num<<endl;
-    }
 };
-void operator ++(Test &s){
-    s.num=s.num+2;
+
+Complex operator +(Complex &c1, Complex &c2)
+{
+    Complex temp;
+    temp.real=c2.real+c1.real;
+    temp.img=c2.img+c1.img;
+    return temp;
 }
+
 int main()
 {
-    Test t1;
-    ++t1;
-    t1.print();
+    Complex t1(10.5,20.100);
+    Complex t2(1.2345,2.876);
+    Complex t4=t1;
+    t1=t1+t2;
+    t4.display();
+    t1.display();
     return 0;
 
 }
