@@ -1,0 +1,35 @@
+
+
+#include <iostream>
+using namespace std;
+
+class Test{
+    int x;
+    public:
+        Test(int num=0)
+        {
+            x=num;
+        }
+        int operator++(int){
+            x=x+4;
+            return x;
+        }
+        int operator++()
+        {
+            x=x+2;
+            return x;
+        }
+        void display(){
+            cout<<x;
+        }
+};
+int main()
+{
+    Test num1;
+    Test num2=10;
+    num1++;
+    ++num2;
+    num1.display();
+    num2.display();
+    return 0;
+}
