@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+class Test{
+    private:
+    int num;
+    public:
+    Test(){
+        cout<<"Enter a number: ";
+        cin>>num;
+
+    }
+    friend void operator ++(Test &s);
+    void print(){
+        cout<<"The num is: "<<num<<endl;
+    }
+};
+void operator ++(Test &s){
+    s.num=s.num+2;
+}
+int main()
+{
+    Test t1;
+    ++t1;
+    t1.print();
+    return 0;
+
+}
